@@ -34,7 +34,7 @@ function Register() {
         },
         onSubmit: async (values) => {
             try {
-                let signupData = await axios.post('http://localhost:8080/signup', values);
+                let signupData = await axios.post('https://newtodo-project.herokuapp.com/signup', values);
                 if (signupData.data.message === "user added sucessfully") {
                     navigate('/');
                     alert("Successfully Registerd ")

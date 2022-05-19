@@ -25,7 +25,7 @@ function Login() {
         },
         onSubmit: async (values) => {
             try {
-              let loginData = await axios.post('http://localhost:8080/login', values);
+              let loginData = await axios.post('https://newtodo-project.herokuapp.com/login', values);
               window.localStorage.setItem('myapptoken', loginData.data.token);
               {loginData.data.message==="login successfully"? navigate('/todo'):alert("Does not match")}
             } catch (error) {

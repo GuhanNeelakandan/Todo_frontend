@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Todopage() {
     const [list, setList] = useState([]);
-    const [isEdit, setIsEdit] = useState(false);
-    const [currentList, setCurrentList] = useState('');
     let navigate = useNavigate()
     let formik = useFormik({
         initialValues: {
@@ -21,7 +19,7 @@ function Todopage() {
         },
         onSubmit: async (values, { resetForm }) => {
             try {
-                    await axios.post('http://localhost:8080/createList', values, {
+                    await axios.post('https://newtodo-project.herokuapp.com/createList', values, {
                     headers: {
                         Authorization: window.localStorage.getItem('myapptoken'),
                     },
@@ -35,7 +33,7 @@ function Todopage() {
     });
     async function fetchAll() {
         try {
-            let listData = await axios.get('http://localhost:8080/getList', {
+            let listData = await axios.get('https://newtodo-project.herokuapp.com/getList', {
                 headers: {
                     Authorization: window.localStorage.getItem('myapptoken'),
                 },
@@ -54,7 +52,7 @@ function Todopage() {
 
     let handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8080/deleteList/${id}`, {
+            await axios.delete(`https://newtodo-project.herokuapp.com/deleteList/${id}`, {
                 headers: {
                     Authorization: window.localStorage.getItem('myapptoken'),
                 },
