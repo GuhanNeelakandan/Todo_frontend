@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
-import Type from "react-typed"
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -39,13 +38,7 @@ function Login() {
             <div className="row">
                 <div className="col login">
                     <div className="mt-2">
-                        <h1 className="text-center login-head">Todo List</h1>
-                        <Type
-                            className="type-string"
-                            strings={["3–5 Tasks per Day","Revise Your To-Do Lists"]}
-                            typeSpeed={60}
-                            backSpeed={60}
-                            loop />
+                        <h1 className="text-center login-head">Docket App</h1>
                     </div>
                     <div className="mt-5 login-border">
                         <form className="m-5" onSubmit={formik.handleSubmit}>
@@ -68,6 +61,10 @@ function Login() {
                                     <Link to={'/register'}>
                                         <input type="submit" class="form-control btn btn-secondary" value={"SignUp"} />
                                     </Link>
+                                </div>
+                                <div>
+                                    email:test@gmail.com<br/>
+                                    password:12345678
                                 </div>
                             </div>
                         </form>
