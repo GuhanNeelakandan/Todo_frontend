@@ -56,15 +56,15 @@ function Login() {
                                     <input type="submit" class="form-control btn btn-warning" value={"Login"} />
 
                                 </div>
-                                <div class="col mt-4">
+                                <div class="col mt-4 mb-2">
                                     <p className="text-center text-white">------create account?------</p>
                                     <Link to={'/register'}>
                                         <input type="submit" class="form-control btn btn-secondary" value={"SignUp"} />
                                     </Link>
                                 </div>
-                                <div>
-                                    email:test@gmail.com<br/>
-                                    password:12345678
+                                <div className='text-white'>
+                                    email : test@gmail.com <br/>
+                                    password : 12345678
                                 </div>
                             </div>
                         </form>
